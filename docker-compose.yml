@@ -1,0 +1,19 @@
+version: "3.2"
+
+volumes:
+  data-postgres:
+
+services:
+  db:
+    container_name: data_postgres_container
+    image: postgres:13.6
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespass
+    volumes:
+      - type: volume
+        source: data-postgres
+        target: /var/lib/postgresql/data
