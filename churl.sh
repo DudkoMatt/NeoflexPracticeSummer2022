@@ -8,4 +8,4 @@ host=$(echo "$hostport" | sed -e 's,:.*,,g')
 port=$(echo "$hostport" | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')
 path=$(echo "$url" | grep '/' | cut -d/ -f2-)
 
-echo "jdbc:postgresql://${host}:${port}/${path}?user=${user}\&password=${password}\&sslmode=require ${user} ${password}"
+echo "jdbc:postgresql://${host}:${port}/${path}?user=${user}&password=${password}&sslmode=require ${user} ${password}"
