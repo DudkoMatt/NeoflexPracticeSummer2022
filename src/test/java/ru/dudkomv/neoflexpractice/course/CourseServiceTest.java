@@ -3,8 +3,10 @@ package ru.dudkomv.neoflexpractice.course;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import ru.dudkomv.neoflexpractice.course.dto.CourseCreationDto;
 import ru.dudkomv.neoflexpractice.course.dto.CourseUpdateDto;
@@ -46,12 +48,13 @@ class CourseServiceTest {
     @Mock
     private LessonService lessonService;
 
+    @InjectMocks
+    @Spy
     private CourseService courseService;
 
     @BeforeEach
     void setUp() {
-        courseService = new CourseService(userService, courseMapper, courseRepository, teacherService, lessonService, courseCategoryService);
-        courseService = Mockito.spy(courseService);
+        Mockito.reset(courseService);
     }
 
     @Test
