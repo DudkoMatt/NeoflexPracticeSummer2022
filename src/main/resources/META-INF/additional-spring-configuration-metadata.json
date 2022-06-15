@@ -1,0 +1,44 @@
+{
+  "properties": [
+    {
+      "name": "app.title",
+      "type": "java.lang.String",
+      "description": "App title showing in Swagger UI."
+    },
+    {
+      "name": "api.version",
+      "type": "java.lang.String",
+      "description": "Api version showing in Swagger UI."
+    },
+    {
+      "name": "api.description",
+      "type": "java.lang.String",
+      "description": "Description of the app showing in Swagger UI."
+    },
+    {
+      "name": "api.contact.name",
+      "type": "java.lang.String",
+      "description": "Developer's name showing in Swagger UI."
+    },
+    {
+      "name": "api.contact.email",
+      "type": "java.lang.String",
+      "description": "Developer's email showing in Swagger UI."
+    },
+    {
+      "name": "api.contact.url",
+      "type": "java.lang.String",
+      "description": "Developer's URL showing in Swagger UI."
+    },
+    {
+      "name": "springdoc.security.scheme",
+      "type": "java.lang.String",
+      "description": "Security scheme for Swagger UI."
+    },
+    {
+      "name": "springdoc.security.scheme-name",
+      "type": "java.lang.String",
+      "description": "Security scheme name for Swagger UI."
+    }
+  ]
+}

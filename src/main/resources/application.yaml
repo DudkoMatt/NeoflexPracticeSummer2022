@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: dev
+  jackson:
+    time-zone: 'Europe/Moscow'
+    deserialization:
+      fail-on-unknown-properties: true
+    mapper:
+      sort-properties-alphabetically: true
+  flyway:
+    clean-on-validation-error: true
+    locations: >-
+      classpath:db/migration/common,classpath:db/migration/${spring.profiles.active}
+
+springdoc:
+  api-docs:
+    path: /swagger
+  model-converters:
+    polymorphic-converter:
+      enabled: false
+  swagger-ui:
+    path: /swagger-ui
+    operationsSorter: alpha
+    tagsSorter: alpha
+  security:
+    scheme: 'basic'
+    scheme-name: 'basicAuth'
+
+api:
+  title: 'Teachers Schedule Service'
+  version: '0.0.1'
+  description: 'Service provides course and time management features for teachers. Source code: <a href="https://github.com/DudkoMatt/NeoflexPracticeSummer2022">GitHub</a>'
+  contact:
+    name: 'Matthew Dudko'
+    email: 'github.dudko.matt@mail.ru'
+    url: 'https://t.me/indefinite_person'
